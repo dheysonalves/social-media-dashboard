@@ -3,25 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+	--color-toogle: 174 179 203;
+	--color-end-toogle: 174 179 203;
+	--color-background: 255 255 255;
+	--color-top-background: 247 245 255;
+	--color-card-background: 240 242 250;
+	--color-text-blue: 99 104 126;
+	--color-text-pattern: 30 32 42;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root[class~="dark"] {
+	--foreground-rgb: 255, 255, 255;
+	--background-start-rgb: 0, 0, 0;
+	--background-end-rgb: 0, 0, 0;
+	--color-toogle: 55 143 230;
+	--color-end-toogle: 55 143 230;
+	--color-background: 30 32 42;
+	--color-top-background: 31 33 46;
+	--color-card-background: 37 42 65;
+	--color-text-blue: 139 151 198;
+	--color-text-pattern: 255 255 255;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: rgb(var(--color-text-pattern));
+	background: rgb(var(--color-background));
 }
