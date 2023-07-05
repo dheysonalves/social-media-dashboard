@@ -6,22 +6,34 @@ import { overview, overviewToday } from "./mocks/dashboard";
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center lg:px-16 p-8 gap-8">
-			<div className="flex gap-4 z-10 w-full max-w-5xl items-center">
-				<div className="z-10 w-full lg:flex flex-col lg:col-span-2 items-start justify-between ">
+			<div className="flex gap-4 z-10 w-full max-w-5xl items-center flex-col lg:flex-row">
+				<div className="z-10 w-full lg:flex flex-col lg:col-span-2 items-start justify-between">
 					<h1 className="lg:text-2xl sm:text-xl leading-none flex lg:pb-2 sm:pb-1 lg:static lg:w-auto font-bold text-textPattern">
 						Social Media Dashboard
 					</h1>
-					<span className="text-xs text-mono leading-none text-textBlue">
+					<span className="text-xs text-mono leading-none text-textPattern">
 						Total Followers: 23,0004
 					</span>
 				</div>
-				<ToggleButton />
+				<div className="flex items-center justify-between gap-1 w-full lg:w-auto">
+					<span className="text-xs text-mono leading-none text-textPattern">
+						Dark Mode
+					</span>
+					<ToggleButton />
+				</div>
 			</div>
 			<div className="grid lg:grid-cols-4 gap-6 w-full max-w-5xl">
 				{overview.map((item, index) => {
 					return (
-						<CardVertical userName={item.username} label={item.label} total={item.total} newUsers={item.newUsers} type={item.type} key={`overview-${index}
-						`} />
+						<CardVertical
+							userName={item.username}
+							label={item.label}
+							total={item.total}
+							newUsers={item.newUsers}
+							type={item.type}
+							key={`overview-${index}
+						`}
+						/>
 					);
 				})}
 			</div>
