@@ -23,6 +23,7 @@ function ToggleButton() {
 				checked={value}
 				className="sr-only peer"
 				onChange={(e) => setValue(e.target.checked)}
+				aria-label="theme-switcher"
 			/>
 			<div
 				className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:bg-toogle

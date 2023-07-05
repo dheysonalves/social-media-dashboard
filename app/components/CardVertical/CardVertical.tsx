@@ -1,4 +1,4 @@
-import { formatNumber, socialMedia } from "@/app/utils/helpers";
+import { formatNumber, socialMedia, socialMediaColors } from "@/app/utils/helpers";
 import Image from "next/image";
 import React from "react";
 
@@ -17,7 +17,8 @@ function CardVertical(props: ICardVertical) {
 			: { color: "text-[#a0595e]", image: "/images/icon-down.svg" };
 
 	return (
-		<button className="flex flex-col justify-between items-center bg-card bg-card hover:bg-[#d8dbec] hover:dark:bg-[#535769] cursor-pointer px-12 py-8 gap-4 rounded border-t-4 border-t-[#198ff5] ">
+		<button
+			className={`flex flex-col justify-between items-center bg-card bg-card hover:bg-[#d8dbec] hover:dark:bg-[#535769] cursor-pointer px-12 py-8 gap-4 rounded border-t-4 ${socialMediaColors[props.type]}`}>
 			<div className="flex gap-2">
 				<span className="flex items-center gap-1 text-xs font-normal text-textBlue">
 					<Image
