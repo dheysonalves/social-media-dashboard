@@ -1,4 +1,4 @@
-import { socialMedia } from "@/app/utils/socialmedia";
+import { formatNumber, socialMedia } from "@/app/utils/helpers";
 import Image from "next/image";
 import React from "react";
 
@@ -15,16 +15,6 @@ function CardVertical(props: ICardVertical) {
 		props.newUsers > 0
 			? { color: "text-[#1db489]", image: "/images/icon-up.svg" }
 			: { color: "text-[#a0595e]", image: "/images/icon-down.svg" };
-
-	function formatNumber(number: number) {
-		if (number >= 1000 && number < 1000000 && number % 1000 === 0) {
-			return number / 1000 + "k";
-		} else if (number >= 1000000 && number % 1000000 === 0) {
-			return number / 1000000 + "m";
-		} else {
-			return number.toString();
-		}
-	}
 
 	return (
 		<button className="flex flex-col justify-between items-center bg-card bg-card hover:bg-[#d8dbec] hover:dark:bg-[#535769] cursor-pointer px-12 py-8 gap-4 rounded border-t-4 border-t-[#198ff5] ">

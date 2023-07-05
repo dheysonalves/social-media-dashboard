@@ -1,4 +1,4 @@
-import { socialMedia } from "@/app/utils/socialmedia";
+import { formatNumber, socialMedia } from "@/app/utils/helpers";
 import Image from "next/image";
 import React from "react";
 
@@ -30,7 +30,7 @@ function CardHorizontal(props: ICardHorizontal) {
 			</div>
 			<div className="flex w-full justify-between items-center">
 				<h1 className="lg:text-2xl sm:text-xl leading-none flex lg:static font-bold text-textPattern">
-					{props.total}
+					{formatNumber(Number(props.total))}
 				</h1>
 				<span
 					className={`text-sm leading-none ${isUpOrDown.color} flex items-center gap-1

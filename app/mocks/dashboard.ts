@@ -51,7 +51,7 @@ export const overviewToday = [
 	{
 		type: "instagram",
 		label: "Profile Views",
-		total: "5200",
+		total: "52000",
 		percentage: 1375,
 	},
 	{

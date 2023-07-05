@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ToggleButton from "./components/Toogle/ToggleButton";
 import CardVertical from "./components/CardVertical/CardVertical";
 import CardHorizontal from "./components/CardHorizontal/CardHorizontal";
